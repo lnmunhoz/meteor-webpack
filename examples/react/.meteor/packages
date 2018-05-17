@@ -20,3 +20,4 @@ ardatan:webpack-dev-middleware
 react-meteor-data
 accounts-ui@1.3.0
 accounts-password@1.5.0
+kadira:flow-router

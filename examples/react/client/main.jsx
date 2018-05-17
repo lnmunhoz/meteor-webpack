@@ -1,13 +1,15 @@
 import React from 'react';
-import { render } from 'react-dom';
+import { FlowRouter } from 'meteor/kadira:flow-router';
+import { mount } from 'react-mounter'
 
 import App from './ui/App';
 import './main.css'
 import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  render(
-    <App />,
-    document.getElementById('render-target')
-  );
-});
+FlowRouter.route('/', {
+  name: 'main',
+  action() {
+    mount(App)
+  }
+})
+
